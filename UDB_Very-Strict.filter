@@ -1,0 +1,636 @@
+﻿# Script edited with Filtration - https://github.com/ben-wallis/Filtration
+# ===============================================================================================================
+# UglydirtBad's Loot Filter - for Path of Exile 2
+# ===============================================================================================================
+# VERSION:  0.1
+# AUTHOR: UglydirtBad
+# Notes: Very strict
+# no magic itens, skill and spiritual gems above lvl 18, suport lvl 3, waystone above 13, flask and itens only with quality or soquets special itens stelar amulet(normal)
+
+# --------------------------
+# Special itens
+# --------------------------
+
+Show
+    Rarity = Normal
+    BaseType "Stellar Amulet"
+    SetTextColor 210 0 0
+    SetBackgroundColor 255 255 255
+    SetBorderColor 210 0 0
+    SetFontSize 35
+    PlayAlertSound 3 300
+    MinimapIcon 2 Red Star
+    PlayEffect Red
+
+Show
+    Rarity >= Normal
+    BaseType "Breach Ring"
+    SetTextColor 255 255 255
+    SetBackgroundColor 165 4 4 255
+    SetBorderColor 255 255 255
+    SetFontSize 35
+    PlayAlertSound 3 300
+    MinimapIcon 2 Red Star
+    PlayEffect Red
+
+Show
+    Rarity = Rare
+    Class "Bows" "Crossbows"
+    SetTextColor 85 46 1 255
+    SetBackgroundColor 231 180 120
+    SetBorderColor 85 46 1 255
+    SetFontSize 33
+    PlayAlertSound 3 300
+    MinimapIcon 2 Red Star
+    PlayEffect Red
+
+# --------------------------
+# Uniques itens
+# --------------------------
+
+Show
+    Rarity = Unique
+    SetTextColor 255 192 145 255
+    SetBackgroundColor 53 13 13 255
+    SetBorderColor 255 192 145 255
+    SetFontSize 35
+    PlayAlertSound 3 300
+    MinimapIcon 2 Brown Star
+    PlayEffect Brown
+
+# --------------------------
+# Rune - Charms - Soul Cores
+# --------------------------
+
+# Special A Tier - League specific socketables and jewels
+Show
+    BaseType "Soul Core of "
+    SetTextColor 255 215 222 255
+    SetBackgroundColor 150 62 78
+    SetBorderColor 150 0 0
+    SetFontSize 34
+    PlayAlertSound 2 90
+    MinimapIcon 2 Red Circle
+
+# Special B Tier - Any Runes and Charms
+Show
+    BaseType "Rune"
+    SetTextColor 159 216 255 255
+    SetBackgroundColor 27 50 74 255
+    SetFontSize 35
+
+Show
+    BaseType "Charm"
+    SetTextColor 159 255 234 255
+    SetBackgroundColor 27 74 35 255
+    SetFontSize 35
+
+# --------------------------
+# Fragments - Splinters
+# --------------------------
+
+# Fragmento de fenda
+Show
+    BaseType "Breach Splinter"
+    SetTextColor 52 2 34
+    SetBackgroundColor 208 32 144
+    SetBorderColor 52 2 34
+    SetFontSize 30
+    PlayAlertSound 1 200
+    MinimapIcon 2 Red Circle
+
+# Fragmento de fenda
+Show
+    BaseType "Simulacrum Splinter"
+    SetTextColor 255 255 255
+    SetBackgroundColor 87 85 85 255
+    SetBorderColor 255 255 255
+    SetFontSize 30
+    PlayAlertSound 1 200
+    MinimapIcon 2 White Circle
+
+#--------------------------
+# Gold
+#--------------------------
+
+Show
+    StackSize >= 100
+    BaseType "Gold"
+    SetTextColor 71 38 0
+    SetBackgroundColor 255 215 0
+    SetFontSize 20
+
+#--------------------------
+# Uncut Gems
+#--------------------------
+
+Show
+    ItemLevel >= 10
+    BaseType "Uncut Skill"
+    SetTextColor 255 255 255 255
+    SetBackgroundColor 74 0 160 200
+    SetBorderColor 255 255 255
+    SetFontSize 35
+    PlayAlertSound 2 300
+    MinimapIcon 2 Blue Diamond
+    PlayEffect Purple
+
+Show
+    ItemLevel = 3
+    BaseType "Uncut Support"
+    SetTextColor 255 255 255
+    SetBackgroundColor 0 148 148 255
+    SetBorderColor 255 255 255
+    SetFontSize 35
+    PlayAlertSound 2 300
+    MinimapIcon 2 Green Diamond
+    PlayEffect Cyan
+
+Show
+    ItemLevel >= 18
+    BaseType "Uncut Spirit"
+    SetTextColor 255 255 255
+    SetBackgroundColor 212 80 103
+    SetBorderColor 255 255 255
+    SetFontSize 35
+    PlayAlertSound 2 300
+    MinimapIcon 2 Red Diamond
+    PlayEffect Pink
+
+# --------------------------
+# Sanctum · Logbook · Ultimatum · Tablet · Trial Coins · Pinnacle Keys
+# --------------------------
+
+# Fragments
+Show
+    BaseType "Barya" "Ultimatum"
+    SetTextColor 255 165 0 255
+    SetBackgroundColor 71 38 0 255
+    SetFontSize 32
+    PlayAlertSound 1 200
+    MinimapIcon 2 Brown Circle
+
+Show
+    BaseType "An Audience with the King" "Breachstone" "Simulacrum"
+    SetTextColor 0 0 0 255
+    SetBackgroundColor 180 96 0
+    SetBorderColor 0 0 0 255
+    SetFontSize 35
+    PlayAlertSound 3 300
+    MinimapIcon 2 Brown Star
+    PlayEffect Red
+
+# Fragments
+Show
+    BaseType "Cowardly Fate" "Deadly Fate" "Victorious Fate"
+    SetTextColor 0 0 0 255
+    SetBackgroundColor 179 179 179 255
+    SetBorderColor 0 0 0
+    SetFontSize 32
+    PlayAlertSound 1 200
+    MinimapIcon 2 White Square
+    PlayEffect White
+
+# Fragments
+Show
+    BaseType "Expedition Logbook" "Tablet"
+    SetTextColor 0 52 18 255
+    SetBackgroundColor 97 226 38 255
+    SetBorderColor 0 73 110 255
+    SetFontSize 32
+    PlayAlertSound 1 200
+    MinimapIcon 2 Brown Circle
+
+Show
+    Class "Pinnacle Keys"
+    SetTextColor 0 0 0 255
+    SetBackgroundColor 255 200 0
+    SetBorderColor 0 0 0 255
+    SetFontSize 35
+    PlayAlertSound 3 300
+    MinimapIcon 2 Brown Star
+    PlayEffect Red
+
+Show
+    Class "Vault Keys"
+    SetTextColor 0 0 0 255
+    SetBackgroundColor 255 255 119
+    SetBorderColor 0 0 0 255
+    SetFontSize 35
+    PlayAlertSound 3 300
+    MinimapIcon 2 Brown Star
+    PlayEffect Yellow
+
+# Special A Tier - Sanctum Relics
+Show
+    Class "Relic"
+    SetTextColor 255 255 119
+    SetBackgroundColor 71 38 0 255
+    SetFontSize 35
+    PlayAlertSound 1 79
+    MinimapIcon 2 Brown Circle
+    PlayEffect Brown
+
+# --------------------------
+# Passive Jewells
+# --------------------------
+
+# Special A Tier - Rare Jewels
+Show
+    Rarity = Unique
+    Class "Jewel"
+    SetTextColor 3 2 1
+    SetBackgroundColor 226 146 54
+    SetBorderColor 0 0 0 255
+    SetFontSize 35
+    PlayAlertSound 6 80
+    MinimapIcon 1 Brown Star
+    PlayEffect Orange
+
+# Special A Tier - Rare Jewels
+Show
+    Rarity = Rare
+    Class "Jewel"
+    SetTextColor 250 147 29 255
+    SetBorderColor 250 147 29 255
+    SetFontSize 33
+
+# Special B Tier - Any Jewels
+Hide
+    Rarity = Magic
+    Class "Jewel"
+    SetTextColor 250 147 29 255
+    SetBorderColor 0 0 255 255
+    SetFontSize 33
+
+# --------------------------
+# Stackable Currency
+# --------------------------
+
+# Divine Orb Style
+Show
+    BaseType "Mirror" "Divine" "Perfect Jeweller's Orb"
+    SetTextColor 255 0 0 255
+    SetBackgroundColor 255 255 255 255
+    SetBorderColor 255 0 0 255
+    SetFontSize 40
+    PlayAlertSound 6 300
+    MinimapIcon 1 Red Star
+    PlayEffect Red
+
+# Currency Tier A: Gemcutter, Annullment
+Show
+    BaseType "Gemcutter's Prism"
+    SetTextColor 255 255 255 255
+    SetBackgroundColor 240 90 35
+    SetBorderColor 255 255 255 255
+    SetFontSize 34
+    PlayAlertSound 1 300
+    MinimapIcon 1 White Circle
+    PlayEffect White
+
+# Currency Tier A: Gemcutter, Annullment
+Show
+    BaseType "Orb of Chance"
+    SetTextColor 254 91 255 255
+    SetBackgroundColor 24 79 163
+    SetBorderColor 254 91 255 255
+    SetFontSize 34
+    PlayAlertSound 1 300
+    MinimapIcon 1 White Circle
+    PlayEffect White
+
+# Currency Tier A: Gemcutter, Annullment
+Show
+    BaseType "Orb of Annulment"
+    SetTextColor 255 255 255 255
+    SetBackgroundColor 0 0 112 255
+    SetBorderColor 255 255 255 255
+    SetFontSize 34
+    PlayAlertSound 1 300
+    MinimapIcon 1 Blue Circle
+    PlayEffect Blue
+
+# Currency Tier B: Vaal, Chaos, Exalt, Exotic
+Show
+    BaseType "Regal Orb"
+    SetTextColor 0 0 255 255
+    SetBackgroundColor 234 198 0 255
+    SetBorderColor 0 0 255 255
+    SetFontSize 34
+    PlayAlertSound 2 300
+    MinimapIcon 1 White Circle
+    PlayEffect White
+
+# Currency Tier B: Vaal, Chaos, Exalt, Exotic
+Show
+    BaseType "Orb of Transmutation"
+    SetTextColor 0 0 255 255
+    SetBackgroundColor 205 205 255 255
+    SetBorderColor 0 0 255 255
+    SetFontSize 33
+    PlayAlertSound 2 300
+    MinimapIcon 1 White Circle
+    PlayEffect White
+
+# Currency Tier B: Vaal, Chaos, Exalt, Exotic
+Show
+    BaseType "Orb of Augmentation"
+    SetTextColor 205 205 255 255
+    SetBackgroundColor 21 21 110 255
+    SetBorderColor 205 205 255 255
+    SetFontSize 34
+    PlayAlertSound 2 300
+    MinimapIcon 1 White Circle
+    PlayEffect White
+
+# Currency Tier B: Vaal, Chaos, Exalt, Exotic
+Show
+    BaseType "Artificer's Orb"
+    SetTextColor 0 0 0 255
+    SetBackgroundColor 201 201 201
+    SetBorderColor 0 0 0 255
+    SetFontSize 34
+    PlayAlertSound 2 300
+    MinimapIcon 1 White Circle
+    PlayEffect White
+
+# Currency Tier C: Vaal, Chaos, Exalt, Exotic
+Show
+    BaseType "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone"
+    SetTextColor 255 207 132
+    SetBorderColor 255 207 132
+
+# Currency Tier B: Vaal, Chaos, Exalt, Exotic
+Show
+    BaseType "Glassblower's Bauble"
+    SetTextColor 5 64 5 255
+    SetBackgroundColor 50 230 100
+    SetBorderColor 5 64 5 255
+    SetFontSize 34
+    PlayAlertSound 2 300
+    MinimapIcon 1 White Circle
+    PlayEffect White
+
+# Simple Jeweller's
+Show
+    BaseType "Greater Jeweller's Orb" "Lesser Jeweller's Orb"
+    SetTextColor 255 227 182 255
+    SetBackgroundColor 130 87 19 255
+    SetBorderColor 255 227 182 255
+    SetFontSize 37
+    PlayAlertSound 10 300
+
+# Currency Tier B: Vaal, Chaos, Exalt, Exotic
+Show
+    BaseType "Orb of Alchemy"
+    SetTextColor 255 227 182 255
+    SetBackgroundColor 212 141 31
+    SetBorderColor 255 227 182 255
+    SetFontSize 32
+    PlayAlertSound 2 300
+    MinimapIcon 1 Yellow Triangle
+    PlayEffect Yellow
+
+# Currency Tier B: Vaal, Chaos, Exalt, Exotic
+Show
+    BaseType "Exalted Orb"
+    SetTextColor 255 215 0 255
+    SetBackgroundColor 76 51 12
+    SetBorderColor 255 215 0 255
+    SetFontSize 32
+    PlayAlertSound 2 300
+    MinimapIcon 1 Yellow Triangle
+    PlayEffect Yellow
+
+# Currency Tier B: Vaal, Chaos, Exalt, Exotic
+Show
+    Class "Currency"
+    BaseType "Chaos Orb"
+    SetTextColor 92 77 0 255
+    SetBackgroundColor 255 215 0
+    SetBorderColor 92 77 0 255
+    SetFontSize 32
+    PlayAlertSound 2 300
+    MinimapIcon 1 Yellow Triangle
+    PlayEffect Yellow
+
+# Currency Tier B: Vaal, Chaos, Exalt, Exotic
+Show
+    BaseType "Vaal Orb"
+    SetTextColor 255 122 122 255
+    SetBackgroundColor 132 0 0
+    SetBorderColor 255 122 122 255
+    SetFontSize 32
+    PlayAlertSound 2 300
+    MinimapIcon 1 Red Triangle
+    PlayEffect Red
+
+Show
+    BaseType "Essence of"
+    SetTextColor 255 165 0 255
+    SetBackgroundColor 51 33 0 255
+    SetFontSize 32
+    PlayAlertSound 2 300
+    MinimapIcon 1 White Circle
+    PlayEffect White
+
+Show
+    BaseType "Catalyst"
+    SetTextColor 42 32 15 255
+    SetBackgroundColor 205 138 33
+    SetBorderColor 105 81 43 255
+    SetFontSize 32
+    PlayAlertSound 2 300
+    MinimapIcon 1 White Circle
+    PlayEffect White
+
+Show
+    BaseType "Distilled"
+    SetTextColor 76 51 12
+    SetBackgroundColor 255 207 132 255
+    SetFontSize 32
+    PlayAlertSound 2 300
+    MinimapIcon 1 White Circle
+    PlayEffect White
+
+Show
+    BaseType "Omen of "
+    SetTextColor 255 255 255 255
+    SetBackgroundColor 76 51 12
+    SetFontSize 32
+    PlayAlertSound 2 300
+    MinimapIcon 1 White Circle
+    PlayEffect White
+
+Hide
+    BaseType "Omen of Resurgence" "Omen of Refreshment"
+    SetTextColor 255 255 255 255
+    SetBackgroundColor 76 51 12
+    SetFontSize 32
+    PlayAlertSound 2 300
+    MinimapIcon 1 White Circle
+    PlayEffect White
+
+Show
+    BaseType "Artifact" "Exotic Coinage"
+    SetTextColor 255 159 9 255
+    SetBorderColor 255 159 9 255
+    SetFontSize 30
+    PlayAlertSound 4 95
+
+Hide # %DS4 $type->currency->stackedsupplieswisdom $tier->t1
+    BaseType "Scroll of Wisdom"
+    SetTextColor 0 0 0 255
+    SetBackgroundColor 231 180 120
+    SetBorderColor 0 0 0 255
+    SetFontSize 28
+
+# --------------------------
+# Stackable Currency Shards
+# --------------------------
+
+# Currency Tier C: Vaal, Chaos, Exalt, Exotic
+Show
+    BaseType "Regal Shard"
+    SetTextColor 0 0 255 255
+    SetBackgroundColor 234 198 0 255
+    SetBorderColor 0 0 255 255
+    SetFontSize 30
+    PlayAlertSound 2 300
+    MinimapIcon 1 White Circle
+    PlayEffect White
+
+# Currency Tier C: Vaal, Chaos, Exalt, Exotic
+Show
+    BaseType "Chance Shard"
+    SetTextColor 150 118 0 255
+    SetBackgroundColor 255 255 255
+    SetBorderColor 150 118 0 255
+    SetFontSize 30
+
+Hide # %DS4 $type->currency->stackedsupplieswisdom $tier->t1
+    BaseType "Scroll of Wisdom"
+    SetTextColor 0 0 0 255
+    SetBackgroundColor 231 180 120
+    SetBorderColor 0 0 0 255
+    SetFontSize 28
+
+# --------------------------
+# Waystone
+# --------------------------
+
+Show
+    WaystoneTier >= 10
+    Class "Waystones"
+    SetTextColor 255 0 0
+    SetBackgroundColor 67 9 9
+    SetBorderColor 255 0 0 255
+    SetFontSize 30
+    PlayAlertSound 4 300
+    MinimapIcon 1 Red Square
+    PlayEffect Red
+
+Show
+    WaystoneTier < 10
+    Class "Waystones"
+    SetTextColor 247 161 161 255
+    SetBorderColor 247 161 161 255
+    SetFontSize 30
+    PlayAlertSound 4 90
+    MinimapIcon 2 Red Square
+
+# --------------------------
+# Flasks
+# --------------------------
+
+Show
+    Rarity = Unique
+    Class "Flasks"
+    SetTextColor 25 13 4
+    SetBackgroundColor 175 96 37
+    SetBorderColor 0 0 0
+    SetFontSize 35
+    PlayAlertSound 1 79
+    MinimapIcon 2 Brown Circle
+    PlayEffect Brown
+
+Show
+    Quality > 5
+    Rarity <= Rare
+    Class "Mana Flasks"
+    SetTextColor 0 45 130 255
+    SetBackgroundColor 255 255 255
+    SetBorderColor 0 45 130 255
+    SetFontSize 30
+    PlayAlertSound 15 79
+
+Show
+    Quality > 5
+    Rarity <= Rare
+    Class "Life Flasks"
+    SetTextColor 255 0 0 255
+    SetBackgroundColor 255 255 255
+    SetBorderColor 255 0 0 255
+    SetFontSize 30
+    PlayAlertSound 15 79
+
+# --------------------------
+# All Itens Rarity
+# --------------------------
+
+Show
+    Rarity = Rare
+    SetTextColor 0 0 0 255
+    SetBackgroundColor 255 215 0
+    SetBorderColor 0 0 0 255
+    SetFontSize 30
+
+Hide
+    Rarity = Magic
+    SetTextColor 0 0 0 255
+    SetBackgroundColor 30 144 255 255
+    SetBorderColor 0 0 0
+    SetFontSize 30
+
+Hide
+    Rarity = Normal
+    SetTextColor 255 255 255
+    SetFontSize 30
+
+# --------------------------
+# Salvagable Items shards
+# --------------------------
+
+Show
+    Quality >= 5
+    Rarity = Normal
+    SetBorderColor 255 255 0 255
+    SetFontSize 30
+
+Show
+    Quality >= 5
+    Rarity = Magic
+    SetBorderColor 255 255 0 255
+    SetFontSize 30
+
+Show
+    Quality >= 5
+    Rarity = Rare
+    SetBorderColor 255 255 0 255
+    SetFontSize 30
+
+Show
+    Quality >= 5
+    Corrupted True
+    Rarity = Magic
+    SetBorderColor 255 255 0 255
+    SetFontSize 30
+
+Show
+    Quality >= 5
+    Corrupted True
+    Rarity = Rare
+    SetBorderColor 255 255 0 255
+    SetFontSize 30
+
